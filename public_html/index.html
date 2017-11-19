@@ -7,8 +7,114 @@
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+
+        <link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+        <link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+
     </head>
     <body ng-app="ngCribs" ng-controller="cribsController">
+        <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+            <!-- Brand -->
+            <a class="navbar-brand" href="#">Navbar</a>
+
+            <!-- Toggler/collapsibe Button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li> 
+                </ul>
+            </div> 
+        </nav>
+
+
+        <section class="cd-hero">
+            <ul class="cd-hero-slider autoplay">
+                <li class="selected">
+                    <div class="cd-full-width">
+                        <h2>Hero slider</h2>
+                        <p>A simple, responsive slideshow in CSS &amp; jQuery.</p>
+                        <a href="http://codyhouse.co/?p=675" class="cd-btn">Article &amp; Download</a>
+                    </div> <!-- .cd-full-width -->
+                </li>
+
+                <li>
+                    <div class="cd-half-width">
+                        <h2>Slide title here</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In consequatur cumque natus!</p>
+                        <a href="#0" class="cd-btn">Start</a>
+                        <a href="#0" class="cd-btn secondary">Learn More</a>
+                    </div> <!-- .cd-half-width -->
+
+                    <div class="cd-half-width cd-img-container">
+                        <img src="assets/tech-1.jpg" alt="tech 1">
+                    </div> <!-- .cd-half-width.cd-img-container -->
+                </li>
+
+                <li>
+                    <div class="cd-half-width cd-img-container">
+                        <img src="assets/tech-2.jpg" alt="tech 2">
+                    </div> <!-- .cd-half-width.cd-img-container -->
+
+                    <div class="cd-half-width">
+                        <h2>Slide title here</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In consequatur cumque natus!</p>
+                        <a href="#0" class="cd-btn">Start</a>
+                        <a href="#0" class="cd-btn secondary">Learn More</a>
+                    </div> <!-- .cd-half-width -->
+
+                </li>
+
+                <li class="cd-bg-video">
+                    <div class="cd-full-width">
+                        <h2>Slide title here</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, explicabo.</p>
+                        <a href="#0" class="cd-btn">Learn more</a>
+                    </div> <!-- .cd-full-width -->
+
+                    <div class="cd-bg-video-wrapper" data-video="assets/video/video">
+                        <!-- video element will be loaded using jQuery -->
+                    </div> <!-- .cd-bg-video-wrapper -->
+                </li>
+
+                <li>
+                    <div class="cd-full-width">
+                        <h2>Slide title here</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, explicabo.</p>
+                        <a href="#0" class="cd-btn">Start</a>
+                        <a href="#0" class="cd-btn secondary">Learn More</a>
+                    </div> <!-- .cd-full-width -->
+                </li>
+            </ul> <!-- .cd-hero-slider -->
+
+            <div class="cd-slider-nav">
+                <nav>
+                    <span class="cd-marker item-1"></span>
+
+                    <ul>
+                        <li class="selected"><a href="#0">Intro</a></li>
+                        <li><a href="#0">Tech 1</a></li>
+                        <li><a href="#0">Tech 2</a></li>
+                        <li><a href="#0">Video</a></li>
+                        <li><a href="#0">Image</a></li>
+                    </ul>
+                </nav> 
+            </div> <!-- .cd-slider-nav -->
+        </section> <!-- .cd-hero -->
+
+
         <div class="card bg-light" ng-repeat="crib in cribs" style="margin-bottom: 10px;">
             <div class="card-body">
                 <h3 class="card-title">{{crib.address}}</h3>
@@ -25,4 +131,8 @@
     <script src="app.js"></script>
     <script src="scripts/cribsController.js"></script>
     <script src="scripts/cribsFactory.js"></script>
+
+    <script src="js/jquery-2.1.1.js"></script>
+    <script src="js/modernizr.js"></script> <!-- Modernizr -->
+    <script src="js/main.js"></script> <!-- Resource jQuery -->
 </html>
